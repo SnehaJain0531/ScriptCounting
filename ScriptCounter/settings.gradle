@@ -1,3 +1,0 @@
-include ':app'
-rootProject.name='ScriptCounter'
-include ':openCVLibrary3410'
