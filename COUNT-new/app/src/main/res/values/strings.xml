@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">COUNT</string>
+    <string name="apptitle">ScriptCounter</string>
+    <string name="appintro">Count answer-scripts at ease. We make use of effective image processing techniques to compute the number of answer booklets in the input image. All you have to do is capture an image with the scripts or import one from your device and send it as input to our algorithm.</string>
+</resources>
