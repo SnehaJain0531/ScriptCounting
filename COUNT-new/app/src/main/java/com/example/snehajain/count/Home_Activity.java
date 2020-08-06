@@ -125,13 +125,13 @@ Mat image;
         Binarization ob2 = new Binarization();
         Mat image1 = new Mat();
         image1 = image.clone();
-        int[] limits;
+        /*int[] limits;
         limits = ob2.cropScript(image);
         int miny = limits[0];
-        int maxy = limits[1];
+        int maxy = limits[1];*/
         Smoothening ob1 = new Smoothening();
-        ArrayList<Integer> results1 =  ob1.getScriptCount(image,miny,maxy);
-        ArrayList<Integer> results2 = ob2.getScriptCount(image1,miny,maxy);
+        ArrayList<Integer> results1 =  ob1.getScriptCount(image,0,image.height());
+        ArrayList<Integer> results2 = ob2.getScriptCount(image1,0,image1.height());
         results1.addAll(results2);
         return ob1.mode(results1);
     }

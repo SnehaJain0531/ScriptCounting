@@ -15,7 +15,7 @@ import org.opencv.imgproc.Imgproc;
 
 class Smoothening {
 
-    public float[] houghCropping(Mat img, Mat edges) {
+   /* public float[] houghCropping(Mat img, Mat edges) {
         Mat lines = new Mat();
         float[] y_vals = new float[2];
 
@@ -37,7 +37,7 @@ class Smoothening {
         y_vals[1] = maxy+5;
 
         return y_vals;
-    }
+    }*/
 
     public int mode(ArrayList<Integer> arr) {
         HashMap<Integer, Integer> vals = new HashMap<Integer, Integer>();
@@ -77,6 +77,7 @@ class Smoothening {
         return y;
     }
 
+
     public ArrayList<Integer> getScriptCount(Mat img,int miny,int maxy) {
 
         Mat gray = new Mat();
@@ -102,14 +103,14 @@ class Smoothening {
         if(maxy>960) maxy = 960;
 
         ArrayList<Integer> results = new ArrayList<Integer>();
-        for (int j=20; j<width; j+=20) {
+        for (int j=10; j<width; j+=10) {
 
             double[] y = new double[maxy-miny+1];
             int count = 0;
 
             for (int i=miny; i<maxy; i++)
                 y[count++] = (int)gray.get(i, j)[0];
-            for (int i=0; i<1; i++)
+            for (int i=0; i<2; i++)
                 y = smooth(y, count);
 
             int dips = 0;

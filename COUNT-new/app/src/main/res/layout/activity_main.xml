@@ -27,26 +27,38 @@
         android:id="@+id/appintro"
         android:layout_width="297dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="92dp"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="sans-serif"
         android:text="@string/appintro"
         android:textColor="@android:color/darker_gray"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title" />
 
     <Button
+        android:id="@+id/demo"
+        android:layout_width="305dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="160dp"
+        android:background="@android:color/darker_gray"
+        android:text="View Tutorial"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/go_to_count"
         android:layout_width="305dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="84dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="80dp"
         android:background="@android:color/darker_gray"
         android:text="Start Counting"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
