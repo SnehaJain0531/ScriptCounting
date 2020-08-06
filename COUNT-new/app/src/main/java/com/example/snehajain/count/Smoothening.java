@@ -103,7 +103,7 @@ class Smoothening {
         if(maxy>960) maxy = 960;
 
         ArrayList<Integer> results = new ArrayList<Integer>();
-        for (int j=10; j<width; j+=10) {
+        for (int j=20; j<width; j+=10) {
 
             double[] y = new double[maxy-miny+1];
             int count = 0;

@@ -120,10 +120,9 @@ public class Binarization {
 
         ArrayList<Integer> results = new ArrayList<Integer>();
 
-        int noi = 100;
+        int noi = 150;
         int stepcount = image.width()/noi;
-
-        if (image.width()<=100)
+        if (image.width()<=150)
         {
             stepcount = 1;
         }
@@ -174,12 +173,10 @@ public class Binarization {
 
             double mean = sum_of_thicknesses/total_dip_count;
             double lthresh = 0.25 * mean;
-            double uthresh = 5 * mean;
 
-            if(total_dip_count>100)
-            {
-                lthresh = 0;
-            }
+
+
+            double uthresh = 5 * mean;
 
             for(int i=0; i<white_region_thicknesses.size()-1;i++)
             {

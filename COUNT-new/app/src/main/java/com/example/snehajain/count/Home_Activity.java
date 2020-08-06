@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,9 +22,26 @@ import org.opencv.android.OpenCVLoader;
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 
-import com.theartofdev.edmodo.cropper.CropImage;
-import com.theartofdev.edmodo.cropper.CropImageView;
+
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.provider.MediaStore;
+//import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.scanlibrary.ScanActivity;
+import com.scanlibrary.ScanConstants;
+
 import java.io.IOException;
+
+
 import java.util.ArrayList;
 
 public class Home_Activity extends AppCompatActivity {
@@ -34,7 +52,8 @@ public class Home_Activity extends AppCompatActivity {
     }
 
     Bitmap bitmap;
-Mat image;
+    int REQUEST_CODE = 99;
+    Mat image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,18 +62,9 @@ Mat image;
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_);
-        Button cam=findViewById(R.id.button2);
-        cam.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                CropImage.activity()
-                        .setGuidelines(CropImageView.Guidelines.ON)
-                        .start(Home_Activity.this);
-            }
-        });
-
-        Button clear = findViewById(R.id.button3);
+        Button cam=findViewById(R.id.camera);
+        Button media = findViewById(R.id.media);
+        ImageButton clear = findViewById(R.id.clear);
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,6 +72,28 @@ Mat image;
                 startActivity(getIntent());
             }
         });
+
+        cam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home_Activity.this, ScanActivity.class);
+                intent.putExtra(ScanConstants.OPEN_INTENT_PREFERENCE, ScanConstants.OPEN_CAMERA);
+                startActivityForResult(intent, REQUEST_CODE);
+          
+            }
+        });
+        
+
+        media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home_Activity.this, ScanActivity.class);
+                intent.putExtra(ScanConstants.OPEN_INTENT_PREFERENCE, ScanConstants.OPEN_MEDIA);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+
+
 
 
         Button count =findViewById(R.id.button4);
@@ -87,6 +119,25 @@ Mat image;
 
             }
         });
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE && resultCode == MainActivity.RESULT_OK) {
+            Uri uri = data.getExtras().getParcelable(ScanConstants.SCANNED_RESULT);
+            bitmap = null;
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                getContentResolver().delete(uri, null, null);
+                ImageView scanPic = (ImageView)findViewById(R.id.imageView);
+                scanPic.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                Toast.makeText(Home_Activity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
+        }
     }
 
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
@@ -125,18 +176,18 @@ Mat image;
         Binarization ob2 = new Binarization();
         Mat image1 = new Mat();
         image1 = image.clone();
-        /*int[] limits;
+        int[] limits;
         limits = ob2.cropScript(image);
         int miny = limits[0];
-        int maxy = limits[1];*/
+        int maxy = limits[1];
         Smoothening ob1 = new Smoothening();
-        ArrayList<Integer> results1 =  ob1.getScriptCount(image,0,image.height());
-        ArrayList<Integer> results2 = ob2.getScriptCount(image1,0,image1.height());
+        ArrayList<Integer> results1 =  ob1.getScriptCount(image,miny,maxy);
+        ArrayList<Integer> results2 = ob2.getScriptCount(image1,miny,maxy);
         results1.addAll(results2);
         return ob1.mode(results1);
     }
 
-        @Override
+      /*  @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
@@ -153,5 +204,5 @@ Mat image;
                 Exception error = result.getError();
             }
         }
-    }
+    }*/
 }

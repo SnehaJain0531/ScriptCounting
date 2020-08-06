@@ -1,37 +1,37 @@
 -- Merging decision tree log ---
 manifest
-ADDED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-8:12
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-8:12
+ADDED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-7:12
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:1-7:12
 	package
-		ADDED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:3:7-27
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		ADDED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:3:7-27
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:5:7-35
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		ADDED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:5:7-35
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:11-69
+		ADDED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:4:7-34
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		ADDED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:4:7-34
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:7:5-47
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:7:5-47
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:7:5-47
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:7:5-47
-INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:7:5-47
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		ADDED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:7:15-44
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		ADDED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
-		ADDED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml:7:5-47
-		INJECTED from H:\ScriptCounting\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		ADDED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
+		INJECTED from H:\COUNT-new\openCVLibrary3410\src\main\AndroidManifest.xml
